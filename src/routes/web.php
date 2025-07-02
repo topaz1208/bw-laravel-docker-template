@@ -17,4 +17,6 @@ Route::get('/', function () {
 
 Route::get('/todo', function () {
     echo 'Hello World!';
-});
+}); //section6 todoページにルートを定義
+
+Route::get('/todo', 'TodoController@index'); //Section7 TodoControllerのindexメソッドを実行
