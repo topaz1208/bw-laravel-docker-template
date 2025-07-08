@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -27,9 +27,16 @@
             </div>
         </nav>
         <main class="py-4">
-            <div class="container">
+            <div class="container"> -->
+                @extends('layouts.base') <!-- 追記 -->
+                @section('content')<!-- 追記 -->
                 <div class="row justify-content-center">
                     <div class="col-md-8">
+                        <!-- section11 追記　ここから -->
+                        <p class="text-left">
+                            <a class="btn btn-success" href="{{ route('todo.create') }}">ToDoを追加</a> 
+                        </p>
+                        <!-- ここまで -->
                         <div class="card">
                             <div class="card-header">
                                 ToDo一覧
@@ -45,8 +52,9 @@
                     </div>
                 </div>
             </div>
-        </main>
+            @endsection <!-- 追記 -->
+        <!-- </main>
     </div>
 </body>
 
-</html>
+</html> -->

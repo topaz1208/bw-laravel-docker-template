@@ -20,3 +20,5 @@ Route::get('/todo', function () {
 }); //section6 todoページにルートを定義
 
 Route::get('/todo', 'TodoController@index'); //Section7 TodoControllerのindexメソッドを実行
+Route::get('/todo/create', 'TodoController@create'); // Section11　新規作成画面のルート
+Route::get('/todo/create', 'TodoController@create')->name('todo.create'); // Section12 追記

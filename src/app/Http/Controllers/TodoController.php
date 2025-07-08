@@ -14,6 +14,12 @@ class TodoController extends Controller
         $todos = $todo->all();  // section8 追加
        return view('todo.index', ['todos' => $todos]);
     }
+    public function create()
+{
+    // TODO: 第1引数を指定
+    return view('todo.create'); // section11 追記
+}
+
 }
 
 
