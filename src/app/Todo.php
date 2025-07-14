@@ -9,4 +9,8 @@ class Todo extends Model
     // section8 追加
     protected $table = 'todos';
 
+    protected $fillable = [
+        'content',
+    ];
+
 }
