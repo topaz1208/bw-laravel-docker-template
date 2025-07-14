@@ -34,7 +34,7 @@ HTTPリクエストで送信されたすべての入力データを配列とし�
 
 ### saveメソッドで実行しているSQLは何か
 INSEINSERT INTO todos (content, created_at, updated_at)VALUES(値,値,値);
-INSEINSERT文。todoテーブルに新しいレコードを追加し、各カラムに値を挿入する。
+INSERT文。todoテーブルに新しいレコードを追加し、各カラムに値を挿入する。
 
 ### redirect()->route()は何をしているか
 指定したルート名に紐づくURLにリダイレクトしている。
