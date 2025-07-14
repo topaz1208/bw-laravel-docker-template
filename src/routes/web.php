@@ -19,6 +19,6 @@ Route::get('/todo', function () {
     echo 'Hello World!';
 }); 
 
-Route::get('/todo', 'TodoController@index')->name('todo.index'); // Section13 追記部分 ルート名の定義を追記 
+Route::get('/todo', 'TodoController@index')->name('todo.index'); 
 Route::get('/todo/create', 'TodoController@create')->name('todo.create'); 
-Route::post('/todo', 'TodoController@store')->name('todo.store'); //Section13 追記部分
+Route::post('/todo', 'TodoController@store')->name('todo.store');
