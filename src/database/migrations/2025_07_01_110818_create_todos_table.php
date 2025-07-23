@@ -15,7 +15,7 @@ class CreateTodosTable extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('content'); //07-01 追加
+            $table->string('content'); 
             $table->timestamps();
         });
     }
