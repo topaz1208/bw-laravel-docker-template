@@ -42,8 +42,16 @@ class TodoController extends Controller
     {
         // $model = new Todo();
         // $todo = $model->find($id);
-        // dd($todo);
         $todo = $this->todo->find($id);
         return view('todo.show', ['todo' => $todo]);
     }
+    public function edit($id)
+    {
+        // TODO: 編集対象のレコードの情報を持つTodoモデルのインスタンスを取得
+        $todo = $this->todo->find($id);
+        // dd($todo);
+        return view('todo.edit', ['todo' => $todo]);
+
+}
+    
 }
