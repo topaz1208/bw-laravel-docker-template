@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request; 
+use App\Http\Requests\TodoRequest; // 追加
 use App\Todo;
 
 class TodoController extends Controller
@@ -26,9 +26,9 @@ class TodoController extends Controller
         return view('todo.create');
     }
     
-    public function store(Request $request)
+    public function store(TodoRequest $request)
     {
-        $inputs = request()->all();
+        $inputs = $request->all();
         
         // $todo = new Todo();
         // $todo->fill($inputs);
@@ -54,10 +54,10 @@ class TodoController extends Controller
     }
     
     // 7/24追加
-    public function update(Request $request, $id) // 第1引数: リクエスト情報の取得　第2引数: ルートパラメータの取得
+    public function update(TodoRequest $request, $id) // 第1引数: リクエスト情報の取得　第2引数: ルートパラメータの取得　//Todoリクエストに修正
     {
         // TODO: リクエストされた値を取得
-        $inputs = request()->all();
+        $inputs = $request->all();
         // TODO: 更新対象のデータを取得
         $todo = $this->todo->find($id);
         // TODO: 更新したい値の代入とUPDATE文の実行
