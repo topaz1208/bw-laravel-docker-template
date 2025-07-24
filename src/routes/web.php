@@ -25,3 +25,6 @@ Route::post('/todo', 'TodoController@store')->name('todo.store');
 // 7/23追加
 Route::get('/todo/{id}', 'TodoController@show')->name('todo.show');
 Route::get('/todo/{id}/edit', 'TodoController@edit')->name('todo.edit');
+//7/24追加
+Route::put('/todo/{id}', 'TodoController@update')->name('todo.update');
+

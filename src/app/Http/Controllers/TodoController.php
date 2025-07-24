@@ -25,11 +25,11 @@ class TodoController extends Controller
     {
         return view('todo.create');
     }
-
+    
     public function store(Request $request)
     {
         $inputs = request()->all();
-
+        
         // $todo = new Todo();
         // $todo->fill($inputs);
         // $todo->save();
@@ -47,11 +47,26 @@ class TodoController extends Controller
     }
     public function edit($id)
     {
-        // TODO: 編集対象のレコードの情報を持つTodoモデルのインスタンスを取得
+        // TODO: 編集対象のレコードの情報を持つTodoモデルのインスタンスを取得 7/23
         $todo = $this->todo->find($id);
-        // dd($todo);
         return view('todo.edit', ['todo' => $todo]);
-
-}
+        
+    }
+    
+    // 7/24追加
+    public function update(Request $request, $id) // 第1引数: リクエスト情報の取得　第2引数: ルートパラメータの取得
+    {
+        // TODO: リクエストされた値を取得
+        $inputs = request()->all();
+        // TODO: 更新対象のデータを取得
+        $todo = $this->todo->find($id);
+        // TODO: 更新したい値の代入とUPDATE文の実行
+        $todo->fill($inputs)->save();
+        // dd($todo);
+        return redirect()->route('todo.show', $todo->id); // 追記
+    }
+    
     
 }
+    
+
