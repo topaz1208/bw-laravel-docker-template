@@ -22,10 +22,7 @@ Route::get('/todo', function () {
 Route::get('/todo', 'TodoController@index')->name('todo.index'); 
 Route::get('/todo/create', 'TodoController@create')->name('todo.create'); 
 Route::post('/todo', 'TodoController@store')->name('todo.store');
-// 7/23追加
 Route::get('/todo/{id}', 'TodoController@show')->name('todo.show');
 Route::get('/todo/{id}/edit', 'TodoController@edit')->name('todo.edit');
-//7/24追加
 Route::put('/todo/{id}', 'TodoController@update')->name('todo.update');
-// 7/29追加　TODO: 第1引数のURI指定
 Route::delete('/todo/{id}', 'TodoController@delete')->name('todo.delete');
